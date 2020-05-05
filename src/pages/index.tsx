@@ -1,16 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { InnerContent } from '../components/InnerContent';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
 
-const StyledInnerContent = styled(InnerContent)`
-    height: calc(100vh - 110px);
-    box-sizing: border-box;
-`;
-
-const StyledProfile = styled.div`
+const StyledFlexWrapper = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
@@ -42,6 +36,7 @@ const StyledName = styled.p`
 const StyledText = styled.span`
     display: block;
     font-size: 25px;
+    text-align: center;
     margin: 0 0 20px;
 `;
 
@@ -68,31 +63,29 @@ const StyledIconLink = styled.a`
 `;
 
 export default () => (
-  <StyledInnerContent>
-        <StyledProfile>
-            <StyledImageWrapper>
-                <StyledImage src="images/avater.jpg" alt="Profile" />
-            </StyledImageWrapper>
-            <StyledName>Shogo Kato</StyledName>
-            <StyledText>Frontend Engineer at DMM GAMES.</StyledText>
+    <StyledFlexWrapper>
+        <StyledImageWrapper>
+            <StyledImage src="images/avater.jpg" alt="Profile" />
+        </StyledImageWrapper>
+        <StyledName>Shogo Kato</StyledName>
+        <StyledText>Frontend Engineer at DMM GAMES.</StyledText>
 
-            <StyledSnsList>
-                <StyledSnsListItem>
-                    <StyledIconLink href="https://github.com/kt-sygo0921" target="_blank">
-                        <GitHubIcon />
-                    </StyledIconLink>
-                </StyledSnsListItem>
-                <StyledSnsListItem>
-                    <StyledIconLink href="https://twitter.com/katoon_mr" target="_blank">
-                        <TwitterIcon />
-                    </StyledIconLink>
-                </StyledSnsListItem>
-                <StyledSnsListItem>
-                    <StyledIconLink href="https://www.facebook.com/p.zonda.pmgp/about?section=overview&lst=100006275850499%3A100006275850499%3A1588672239" target="_blank">
-                        <FacebookIcon />
-                    </StyledIconLink>
-                </StyledSnsListItem>
-            </StyledSnsList>
-        </StyledProfile>
-  </StyledInnerContent>
+        <StyledSnsList>
+            <StyledSnsListItem>
+                <StyledIconLink href="https://github.com/kt-sygo0921" target="_blank">
+                    <GitHubIcon />
+                </StyledIconLink>
+            </StyledSnsListItem>
+            <StyledSnsListItem>
+                <StyledIconLink href="https://twitter.com/katoon_mr" target="_blank">
+                    <TwitterIcon />
+                </StyledIconLink>
+            </StyledSnsListItem>
+            <StyledSnsListItem>
+                <StyledIconLink href="https://www.facebook.com/p.zonda.pmgp/about?section=overview&lst=100006275850499%3A100006275850499%3A1588672239" target="_blank">
+                    <FacebookIcon />
+                </StyledIconLink>
+            </StyledSnsListItem>
+        </StyledSnsList>
+    </StyledFlexWrapper>
 );
