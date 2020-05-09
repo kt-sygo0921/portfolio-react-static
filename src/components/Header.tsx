@@ -4,12 +4,11 @@ import styled from 'styled-components';
 import {Wrapper} from './Wrapper';
 import {Button} from '@material-ui/core';
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled(Wrapper)`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1024px;
-    margin: 0 auto;
+    height: 70px;   
 `;
 
 const StyledTitle = styled.h1`
@@ -33,26 +32,24 @@ const StyledNaviButton = styled(Button)`
 `;
 
 const Header = () => (
-    <Wrapper>
-        <StyledWrapper>
-            <StyledTitle>
-                <StyledLink to="/">
-                    <StyledTitleBUtton>Kato Shogo</StyledTitleBUtton>
-                </StyledLink>
-            </StyledTitle>
-            <nav>
-                <StyledLink to="/about">
-                    <StyledNaviButton>About</StyledNaviButton>
-                </StyledLink>
-                <StyledLink to="/blog">
-                    <StyledNaviButton>Blog</StyledNaviButton>
-                </StyledLink>
-                <StyledLink to="/dynamic">
-                    <StyledNaviButton>Dynamic</StyledNaviButton>
-                </StyledLink>
-            </nav>
-        </StyledWrapper>
-    </Wrapper>
+    <StyledWrapper>
+        <StyledTitle>
+            <StyledLink to="/">
+                <StyledTitleBUtton>Kato Shogo</StyledTitleBUtton>
+            </StyledLink>
+        </StyledTitle>
+        <nav>
+            <StyledLink to="/about">
+                <StyledNaviButton>About</StyledNaviButton>
+            </StyledLink>
+            <StyledLink to="/blog">
+                <StyledNaviButton>Blog</StyledNaviButton>
+            </StyledLink>
+            <StyledLink to="/dynamic">
+                <StyledNaviButton>Dynamic</StyledNaviButton>
+            </StyledLink>
+        </nav>
+    </StyledWrapper>
 )
 
 export {Header};
